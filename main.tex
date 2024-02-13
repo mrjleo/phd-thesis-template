@@ -1,0 +1,117 @@
+\documentclass[
+%  accepted, % <-- before you publish, uncomment this to update the cover
+  a4paper,
+  12pt,
+  numbers=noenddot,
+  listof=totoc,
+  toc=bibliography,
+]{phdthesis}
+
+% --- layout ---
+\linespread{1.25}
+\KOMAoptions{DIV=last}
+
+% --- fonts ---
+\usepackage[
+  T1,
+]{fontenc}
+\usepackage{libertine}
+\usepackage{inconsolata}
+
+% --- references ---
+\usepackage[
+  natbib=true,
+  backend=biber,
+]{biblatex}
+
+% --- languages ---
+\usepackage[
+  main=english,
+  german,
+]{babel}
+
+% --- links ---
+\usepackage[
+  hidelinks,
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue,
+]{hyperref}
+
+% this disables colored links when the document is printed
+\usepackage[
+  ocgcolorlinks,
+]{ocgx2}
+
+% --- bib files ---
+\addbibresource{bib/references1.bib}
+% ...
+
+% --- thesis parameters ---
+\title{Your PhD Thesis Title}
+
+% use this to adjust the width of the title on the cover if necessary
+% \titlewidth{0.8\textwidth}
+
+% this is normally the date of the defense
+% uncomment this for the accepted version
+% \dateofpromotion{yyyy-mm-dd}
+
+% this is normally the publication or submission date
+% modify if needed
+% \titlepageyear{yyyy}
+
+% --- author information ---
+\author{Your Name}
+
+% pick one
+% \formofaddress{Frau}
+% \formofaddress{Herrn}
+
+% your data
+% \dateofbirth{yyyy-mm-dd}
+% \placeofbirth{Your city, Your country}
+
+% modify those if needed
+% \degree{M\@. Sc\@.}
+% \phdtype{Doktor rerum naturalium}{Dr\@. rer\@. nat\@.}
+
+% examiners
+\examiner[Referent(in)]{Prof\@. Dr\@. First Examiner}{First Examiner's Affiliation}
+\examiner[Korreferent(in)]{Prof\@. Dr\@. Second Examiner}{Second Examiner's Affiliation}
+% ...
+
+\begin{document}
+\KOMAoptions{twoside=false}
+\makecover
+\KOMAoptions{twoside=true,open=right}
+\maketitle
+
+% --- content ---
+\frontmatter
+\begin{spacing}{1}
+  \input{content/abstract.tex}
+  \begin{otherlanguage}{german}
+    \input{content/zusammenfassung.tex}
+  \end{otherlanguage}
+\end{spacing}
+\input{content/acknowledgements.tex}
+\input{content/foreword.tex}
+\tableofcontents
+\mainmatter
+
+% your content
+\input{content/intro.tex}
+% ...
+
+% appendix (e.g., CV) goes here
+% \appendix
+% ...
+
+\printbibliography
+\listoffigures
+\listoftables
+% \listofalgorithms
+
+\end{document}
