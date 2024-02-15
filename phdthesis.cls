@@ -55,7 +55,7 @@
 \newcommand{\@phdtype}{Doktor rerum naturalium}
 \newcommand{\@phdtypeshort}{Dr\@. rer\@. nat\@.}
 \DTMsavedate{dateofbirth}{1970-01-01}
-\newcommand{\@titlepageyear}{\the\year{}}
+\newcommand{\@coverpageyear}{\the\year{}}
 
 % --- setters ---
 \newcommand{\titlewidth}[1]{\renewcommand{\@titlewidth}{#1}}
@@ -64,7 +64,7 @@
 \newcommand{\degree}[1]{\renewcommand{\@degree}{#1}}
 \newcommand{\phdtype}[2]{\renewcommand{\@phdtype}{#1}\renewcommand{\@phdtypeshort}{#2}}
 \newcommand{\dateofpromotion}[1]{\DTMsavedate{dateofpromotion}{#1}}
-\newcommand{\titlepageyear}[1]{\renewcommand{\@titlepageyear}{#1}}
+\newcommand{\coverpageyear}[1]{\renewcommand{\@coverpageyear}{#1}}
 \newcommand{\dateofbirth}[1]{\DTMsavedate{dateofbirth}{#1}}
 
 % --- examiner list ---
@@ -107,7 +107,7 @@
     geboren am \DTMusedate{dateofbirth}\\
     in \@placeofbirth
     \vfill
-    \@titlepageyear
+    \@coverpageyear
   \end{center}
   \cleardoublepage
   \restoregeometry
