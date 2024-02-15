@@ -15,7 +15,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{phdthesis}[
-  2024/02/13 Computer Science PhD thesis (Leibniz University Hannover)
+  2024/02/15 Computer Science PhD thesis (Leibniz University Hannover)
 ]
 \RequirePackage{setspace}
 \RequirePackage[german]{datetime2}
